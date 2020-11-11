@@ -1,0 +1,8 @@
+<div class="home">
+  <div class="header-button">
+    <a [routerLink]="['/create']" class="button">Add New Post</a>
+  </div>
+  <div *ngFor="let post of posts">
+    <app-post-list-item [postData]="post"></app-post-list-item>
+  </div>
+</div>

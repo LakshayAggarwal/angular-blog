@@ -1,0 +1,30 @@
+#app {
+  #nav {
+    height: 10vh;
+    background: #333;
+    padding: 25px;
+    display: flex;
+    color: #fff;
+    justify-content: left;
+    align-items: center;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+
+  .route-container {
+    padding-top: 20px;
+    min-height: 80vh;
+  }
+
+  .footer {
+    display: flex;
+    font-size: 0.8rem;
+    height: 10vh;
+    justify-content: space-around;
+    align-items: center;
+  }
+}

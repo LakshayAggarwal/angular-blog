@@ -1,0 +1,45 @@
+<div>
+  <div class="form-container">
+    <div class="main-header">
+      <div class="back-navigation">
+        <fa-icon [icon]="faArrowLeft" (click)="backNavigation()" class="back-button"></fa-icon>
+      </div>
+      <h2 class="page-heading">
+        Create New Post
+      </h2>
+    </div>
+    <form *ngIf="createForm" [formGroup]="createForm" (ngSubmit)="onSubmit()">
+      <label for="title">Title</label>
+      <input 
+        type="text"
+        name="title" 
+        class="input-box" 
+        id="title" 
+        formControlName="title" 
+        placeholder="Enter the title">
+      <span class="validation-error" *ngIf="createForm.get('title').invalid && createForm.get('title').touched">Please enter a valid title</span>
+      <label for="category">Category</label>
+      <input 
+        type="text" 
+        name="category" 
+        id="category"
+        class="input-box" 
+        formControlName="category" 
+        placeholder="Enter the category">
+        <span class="validation-error" *ngIf="createForm.get('category').invalid && createForm.get('category').touched">Please enter a valid category</span>
+      <label for="content">Content</label>
+      <textarea 
+        class="input-box" 
+        name="content" 
+        formControlName="content" 
+        cols="30" 
+        rows="10"
+        placeholder="Enter the content here"></textarea>
+        <span class="validation-error" *ngIf="createForm.get('content').invalid && createForm.get('content').touched">Please enter content</span>
+      <div class="button-group">
+        <button class="button fill-button" (click)="cancelClick()">Cancel</button>
+        <input class="button" type="submit" value="Submit">
+      </div>
+    </form>
+  </div>
+</div>

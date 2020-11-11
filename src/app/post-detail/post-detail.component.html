@@ -1,0 +1,21 @@
+<div class="detail-container">
+  <div class="button-group">
+    <span class="left-button-group">
+      <fa-icon [icon]="faArrowLeft" (click)="backNavigation()" class="back-button"></fa-icon>
+    </span>
+    <span class="right-button-group">
+      <fa-icon [icon]="faThumbsUp" (click)="toggleLike()" class="like-button"
+      [ngClass]="{'liked' : isLiked }"></fa-icon>
+      <!-- [ngClass]="{'like-button', isLiked ? 'liked' : ''}" -->
+      <button class="button fill-button" (click)="navigateToEdit(postData.postId)">Edit</button>
+      <button class="button" (click)="deletePost()">Delete</button>
+    </span>      
+  </div>
+  <div class="form-container">
+    <h2 class="post-heading">
+      {{postData.title}} 
+      <span class="post-subheading">{{postData.category}}</span> 
+    </h2>
+    <div class="post-content">{{postData.content}}</div>
+  </div>
+</div>

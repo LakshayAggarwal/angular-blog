@@ -1,0 +1,16 @@
+.home {
+  max-width: 70%;
+  margin: auto;
+  padding: 20px 10px;
+
+  .header-button {
+    padding-bottom: 20px;
+    text-align: right;
+  }
+}
+
+@media (max-width: 500px) {
+  .home {
+    max-width: 90%;
+  }
+}

@@ -1,1 +1,68 @@
 /* You can add global styles to this file, and also import other style files */
+$black-color: #333;
+$white-color: #fff;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+label {
+  display: block;
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.input-box {
+  width: 100%;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid $black-color;
+  margin-bottom: 10px;
+}
+
+.button {
+  padding: 5px 10px;
+  border: 1px solid $black-color;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+  background: $white-color;
+  color: #000;
+  text-decoration: none;
+
+  &:hover {
+    background: #f4f4f4;
+  }
+}
+
+.fill-button {
+  background: $black-color;
+  color: $white-color;
+
+  &:hover {
+    background: #444;
+  }
+}
+
+.back-button {
+  cursor: pointer;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.input-box.ng-invalid.ng-touched {
+  border: 1px solid #ff0033;
+  margin-bottom: 0px;
+}
+
+.validation-error {
+  font-size: 0.8rem;
+  color: #ff0033;
+}
